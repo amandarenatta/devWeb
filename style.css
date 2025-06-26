@@ -1,0 +1,525 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#cabecalho {
+    background-color: #fad91d; 
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+ 
+  #logo {
+    background-image: url('assets/logo.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 200px;
+    height: 100px;
+    text-indent: -9999px;
+    flex-shrink: 0;
+  }
+
+
+
+
+
+
+
+
+  
+  /* MENU DE NAVEGAÇÃO */
+  .menu-navegacao ul {
+    list-style: none;
+    display: flex;
+    gap: 30px; 
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu-navegacao li {
+    display: inline;
+  }
+  
+  .menu-navegacao a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    padding: 8px 12px;
+    border-radius: 4px;
+  }
+  
+  .menu-navegacao a:hover,
+  .menu-navegacao a:focus {
+    color: #ffffff; 
+    background-color: rgba(255, 255, 255, 0.3); 
+  }
+  
+  
+  .menu-navegacao a.active {
+    color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+  }
+  
+
+
+
+
+
+
+
+
+/* SEÇÃO SOBRE */
+#sobre {
+  background-color: #ffffff;
+  color: #000;
+  padding: 60px 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+#sobre .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.sobre-banner {
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-bottom: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.sobre-banner:hover {
+  background-color: #f0f0f0;
+}
+
+.sobre-banner h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #fad91d;
+}
+
+.sobre-banner p {
+  font-size: 1.1em;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.sobre-conteudo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.sobre-coluna {
+  background-color: #fff;
+  border-left: 4px solid #fad91d;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.sobre-coluna:hover {
+  transform: translateY(-5px);
+}
+
+.sobre-coluna h3 {
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.sobre-coluna p {
+  color: #555;
+  font-size: 1em;
+}
+
+
+.valores-section {
+  background-color: #fafafa;
+  padding: 50px 30px;
+  border-radius: 10px;
+  margin-bottom: 60px;
+}
+
+.valores-section h3 {
+  text-align: center;
+  font-size: 2em;
+  color: #fad91d;
+  margin-bottom: 40px;
+}
+
+.valores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.valor-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.valor-card:hover {
+  transform: translateY(-5px);
+}
+
+.valor-icone {
+  font-size: 2em;
+  color: #007BFF;
+  margin-bottom: 10px;
+}
+
+.valor-card h4 {
+  font-size: 1.2em;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.valor-card p {
+  font-size: 0.95em;
+  color: #555;
+}
+
+
+
+
+
+
+
+
+
+/* CONTAINER DO BANNER CARROSSEL*/
+.banner-carrossel {
+  position: relative;
+  width: 100%;
+  height: 60vh;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+
+.banner-item {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.banner-item:hover {
+  transform: scale(1.02);
+}
+
+
+.banner-conteudo {
+  max-width: 800px;
+  padding: 30px;
+  background-color: #fad91dd8; 
+  color: #444; 
+  text-align: center;
+  border-radius: 10px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+
+.banner-conteudo h2 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
+  color: #333; 
+  font-weight: 600;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+
+.banner-conteudo p {
+  font-size: 1.1em;
+  color: #555; 
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+  
+ 
+  .banner-carrossel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+
+
+
+
+
+
+
+
+
+
+  /* SEÇÃO DE PREÇOS NA PAGINA HOME*/
+.secao-precos {
+  background-color: #ffffff; 
+  padding: 60px 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* TABELAS*/
+.container-precos {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* CARD DE PREÇO */
+.preco-card {
+  background-color: #dbdbdb;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  padding: 30px 20px;
+  text-align: center;
+  width: calc(33.33% - 15px); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.preco-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+.preco-header {
+  background-color: #fad91d;
+  padding: 20px;
+  border-radius: 8px 8px 0 0;
+  color: #000;
+}
+
+.preco-header h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.preco-header .preco {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #000;
+}
+
+
+.preco-lista {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  color: #333;
+}
+
+.preco-lista li {
+  margin-bottom: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+/* BOTÃO DO CARD */
+.btn-preco {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #fad91d;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-preco:hover {
+  background-color: #eac50d;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* PRODUTOS */
+.secao-produtos-adicionais {
+  background-color: #ffffff; 
+  padding: 60px 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.produtos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+
+.produto-card {
+  background-color: #fafafa;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.produto-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+.produto-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+
+.produto-card h3 {
+  font-size: 1.5em;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+
+.produto-card p {
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+
+.btn-produto {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #fad91d;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-produto:hover {
+  background-color: #eac50d;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* RODAPÉ */
+.rodape {
+  background-color: #fad91d;
+  color: #000;
+  padding: 40px 30px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.rodape .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.rodape-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+
+.rodape-contato h3,
+.rodape-redes h3,
+.rodape-localizacao h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+.rodape-contato p {
+  margin-bottom: 10px;
+  font-size: 1em;
+  color: #333;
+}
+
+.icon {
+  margin-right: 8px;
+  color: #007BFF;
+}
+
+
+/* REDES SOCIAIS */
+.rodape-lista-redes {
+  list-style: none;
+  padding: 0;
+}
+
+.rodape-lista-redes li {
+  margin-bottom: 10px;
+}
+
+.rodape-lista-redes a {
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.rodape-lista-redes a:hover {
+  color: #007BFF;
+}
+
