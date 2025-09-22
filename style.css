@@ -26,13 +26,6 @@
     flex-shrink: 0;
   }
 
-
-
-
-
-
-
-
   
   /* MENU DE NAVEGAÇÃO */
   .menu-navegacao ul {
@@ -68,13 +61,6 @@
     color: #ffffff;
     border-bottom: 2px solid #ffffff;
   }
-  
-
-
-
-
-
-
 
 
 /* SEÇÃO SOBRE */
@@ -200,14 +186,6 @@
   color: #555;
 }
 
-
-
-
-
-
-
-
-
 /* CONTAINER DO BANNER CARROSSEL*/
 .banner-carrossel {
   position: relative;
@@ -235,7 +213,6 @@
 .banner-item:hover {
   transform: scale(1.02);
 }
-
 
 .banner-conteudo {
   max-width: 800px;
@@ -277,15 +254,6 @@
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
   }
-
-
-
-
-
-
-
-
-
 
 
   /* SEÇÃO DE PREÇOS NA PAGINA HOME*/
@@ -372,16 +340,6 @@
   background-color: #eac50d;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* PRODUTOS */
 .secao-produtos-adicionais {
   background-color: #ffffff; 
@@ -450,17 +408,6 @@
   background-color: #eac50d;
 }
 
-
-
-
-
-
-
-
-
-
-
-
 /* RODAPÉ */
 .rodape {
   background-color: #fad91d;
@@ -522,4 +469,5 @@
 .rodape-lista-redes a:hover {
   color: #007BFF;
 }
+
 
